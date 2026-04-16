@@ -9,9 +9,6 @@
 
 A powerful web application that converts speech to text with support for **English** and **Hindi** languages using OpenAI's Whisper model. Perfect for transcriptions, meeting notes, lecture recordings, and more!
 
-## 📸 Demo
-
-![Speech to Text Converter Demo](https://via.placeholder.com/800x400?text=Speech+to+Text+Converter+Demo)
 
 ## ✨ Features
 
