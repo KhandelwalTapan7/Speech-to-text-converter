@@ -1,4 +1,3 @@
-```markdown
 # 🎙️ Speech to Text Converter
 
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
@@ -456,5 +455,5 @@ cd E:\speech-to-text-app
 git add README.md
 git commit -m "Add comprehensive README with documentation"
 git push origin main
-```
+
 
