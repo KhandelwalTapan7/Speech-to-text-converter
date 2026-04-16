@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text - English & Hindi Support</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎙️ Speech to Text Converter</h1>
+            <p>Supports English & Hindi | Upload audio or record live</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Language Selection -->
+            <div class="language-section">
+                <label for="language">Select Language:</label>
+                <select id="language">
+                    <option value="auto">Auto-detect</option>
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी (Hindi)</option>
+                </select>
+            </div>
+
+            <!-- Recording Section -->
+            <div class="recording-section">
+                <h3>🎤 Live Recording</h3>
+                <button id="recordBtn" class="btn btn-record">
+                    <span class="mic-icon">🎤</span> Start Recording
+                </button>
+                <button id="stopBtn" class="btn btn-stop" disabled>
+                    ⏹️ Stop Recording
+                </button>
+                <div id="recordingStatus" class="recording-status"></div>
+            </div>
+
+            <!-- File Upload Section -->
+            <div class="upload-section">
+                <h3>📁 Upload Audio File</h3>
+                <div class="upload-area" id="uploadArea">
+                    <input type="file" id="audioFile" accept="audio/*,video/*" style="display: none">
+                    <button id="uploadBtn" class="btn btn-upload">Choose File</button>
+                    <span id="fileName" class="file-name">No file selected</span>
+                </div>
+                <button id="transcribeBtn" class="btn btn-transcribe" disabled>
+                    Convert to Text
+                </button>
+            </div>
+
+            <!-- Progress Section -->
+            <div id="progressSection" class="progress-section" style="display: none;">
+                <div class="spinner"></div>
+                <p>Processing audio...</p>
+            </div>
+
+            <!-- Result Section -->
+            <div class="result-section">
+                <h3>📝 Transcribed Text</h3>
+                <div id="result" class="result-box">
+                    <p class="placeholder">Your transcribed text will appear here...</p>
+                </div>
+                <div class="result-actions">
+                    <button id="copyBtn" class="btn btn-small" disabled>📋 Copy Text</button>
+                    <button id="downloadBtn" class="btn btn-small" disabled>💾 Download as TXT</button>
+                </div>
+            </div>
+
+            <!-- Tips -->
+            <div class="tips-section">
+                <h4>💡 Tips:</h4>
+                <ul>
+                    <li>Supported formats: MP3, WAV, M4A, MP4, WEBM, OGG</li>
+                    <li>For best results with Hindi, select "हिंदी (Hindi)" from language dropdown</li>
+                    <li>Keep audio clear and minimize background noise</li>
+                    <li>Maximum file size: 25MB</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
